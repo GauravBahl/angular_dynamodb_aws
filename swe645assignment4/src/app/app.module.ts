@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { StudentSurveyFormComponent } from './student-survey-form/student-survey-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentSurveyListComponent } from './student-survey-list/student-survey-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    StudentSurveyFormComponent
+    StudentSurveyFormComponent,
+    StudentSurveyListComponent
   ],
   imports: [
     BrowserModule,

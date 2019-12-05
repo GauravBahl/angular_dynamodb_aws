@@ -1,5 +1,10 @@
 <h1>
   Welcome to {{ title }}
 </h1>
-<app-student-survey-form></app-student-survey-form>
+<nav>
+    <a routerLink="/student-survey-form" routerLinkActive="active">Student Survey Form</a>
+    <a routerLink="/student-surveys" routerLinkActive="active">Student Surveys</a>
+</nav>
+  <!-- <app-student-survey-form></app-student-survey-form> -->
+
 <router-outlet></router-outlet>
