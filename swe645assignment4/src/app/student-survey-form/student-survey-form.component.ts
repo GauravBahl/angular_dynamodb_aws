@@ -56,7 +56,15 @@ export class StudentSurveyFormComponent implements OnInit {
     }
 
     this.logs = emailFormArray.value.toString();
+    
     console.log('String values = '+this.logs);
+
+    this.model = new Student("first name", "last name", "Street Address", "City",
+     "State", "Zip", "Email", "Telephone Number", "Date of survey",
+      this.logs,
+      this.options[0],
+      "Friends, TV");
+
   }
 
 }
