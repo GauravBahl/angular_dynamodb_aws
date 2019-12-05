@@ -2,83 +2,67 @@
    <h1>Product Form</h1>
    <form>
       <div class = "form-group">
-         <label for = "studentid">Student ID</label>
-         <input type = "text" class = "form-control" id = "id" required
-            [(ngModel)] = "model.studentid" name = "studentid">
-      </div>
-
-      <div class = "form-group">
          <label for = "firstname">Firstname</label>
-         <input type = "text" class = "form-control" id = "firstname"
-            [(ngModel)] = "model.firstname" name = "firstname">
+         <input type = "text" class = "form-control" id = "first_name"
+            [(ngModel)] = "model.first_name" name = "first_name">
       </div>
 
       <div class = "form-group">
          <label for = "lastname">Lastname</label>
-         <input type = "text" class = "form-control" id = "lastname"
-            [(ngModel)] = "model.lastname" name = "lastname">
+         <input type = "text" class = "form-control" id = "last_name"
+            [(ngModel)] = "model.last_name" name = "last_name">
       </div>
 
       <div class = "form-group">
          <label for = "a">Address</label>
-         <input type = "text" class = "form-control" id = "lastname"
-            [(ngModel)] = "model.address" name = "lastname">
+         <input type = "text" class = "form-control" id = "street_address"
+            [(ngModel)] = "model.street_address" name = "street_address">
       </div>
 
       <div class = "form-group">
          <label for = "name">City</label>
-         <input type = "text" class = "form-control" id = "lastname"
-            [(ngModel)] = "model.city" name = "lastname">
+         <input type = "text" class = "form-control" id = "city"
+            [(ngModel)] = "model.city" name = "city">
       </div>
       <div class = "form-group">
         <label for = "name">State</label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.state" name = "lastname">
+        <input type = "text" class = "form-control" id = "state"
+           [(ngModel)] = "model.state" name = "state">
      </div>
      <div class = "form-group">
         <label for = "name">Zip Code</label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.zip" name = "lastname">
+        <input type = "text" class = "form-control" id = "zip"
+           [(ngModel)] = "model.zip" name = "zip">
      </div>
      <div class = "form-group">
         <label for = "name">Email</label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.email" name = "lastname">
+        <input type = "text" class = "form-control" id = "email"
+           [(ngModel)] = "model.email" name = "email">
      </div>
      <div class = "form-group">
         <label for = "name">Phone</label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.phone" name = "lastname">
+        <input type = "text" class = "form-control" id = "telephone_number"
+           [(ngModel)] = "model.telephone_number" name = "telephone_number">
      </div>
      <div class = "form-group">
-        <label for = "name">URL</label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.url" name = "lastname">
-     </div>
-     <div class = "form-group">
-        <label for = "name">High School Graduation Date</label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.graddate" name = "lastname">
+        <label for = "name">Date of Survey</label>
+        <input type = "text" class = "form-control" id = "date_of_survey"
+           [(ngModel)] = "model.date_of_survey" name = "date_of_survey">
      </div>
      <div class = "form-group">
         <label for = "name">Interests</label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.interests" name = "lastname">
+        <input type = "text" class = "form-control" id = "hobbies"
+           [(ngModel)] = "model.hobbies" name = "hobbies">
      </div>
      <div class = "form-group">
-        <label for = "name">Comments</label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.comments" name = "lastname">
-     </div>
+            <label for = "name">Favorite Location: </label>
+            <input type = "text" class = "form-control" id = "favLocation"
+               [(ngModel)] = "model.favLocation" name = "favLocation">
+         </div>
      <div class = "form-group">
         <label for = "name">Likelihood of recommending this school to other prospective students:</label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.recommendation" name = "lastname">
-     </div>
-     <div class = "form-group">
-        <label for = "name">Raffle: </label>
-        <input type = "text" class = "form-control" id = "lastname"
-           [(ngModel)] = "model.raffle" name = "lastname">
+        <input type = "text" class = "form-control" id = "recommend"
+           [(ngModel)] = "model.recommend" name = "recommend">
      </div>
    </form>
 
