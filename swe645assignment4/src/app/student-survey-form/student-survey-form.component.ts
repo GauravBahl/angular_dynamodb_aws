@@ -17,12 +17,6 @@ export class StudentSurveyFormComponent implements OnInit {
   constructor (private http: HttpClient) {  }
 
   ngOnInit() {
-    let obs = this.http.get('https://12ly4umjs5.execute-api.us-east-1.amazonaws.com/prod/student');
-    obs.subscribe((response) => console.log(response));
-  }
-  onGet() {
-    let obs = this.http.get('https://12ly4umjs5.execute-api.us-east-1.amazonaws.com/prod/student');
-    obs.subscribe((response) => console.log(response));
   }
   onPost() {
     // add some header
