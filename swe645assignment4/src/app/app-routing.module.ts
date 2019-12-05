@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'student-survey-form', component: StudentSurveyFormComponent },
   { path: 'student-surveys', component: StudentSurveyListComponent },
   { path: 'hero-form', component: HeroFormComponent },
