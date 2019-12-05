@@ -1,16 +1,24 @@
 <div class = "container">
    <h1>Student Survey Form</h1>
    <form>
+
+  <div class = "form-group">
+     <input id="name" name="name" class="form-control"
+      required minlength="4" appForbiddenName="bob"
+      [(ngModel)]="model.first_name" #name="ngModel" >
+</div>
+
       <div class = "form-group">
          <label for = "firstname">Firstname</label>
          <input type = "text" class = "form-control" id = "first_name"
-            [(ngModel)] = "model.first_name" name = "first_name">
+            [(ngModel)] = "model.first_name" name = "first_name"
+            required minlength="4">
       </div>
 
       <div class = "form-group">
          <label for = "lastname">Lastname</label>
          <input type = "text" class = "form-control" id = "last_name"
-            [(ngModel)] = "model.last_name" name = "last_name">
+            [(ngModel)] = "model.last_name" name = "last_name" required>
       </div>
 
       <div class = "form-group">
@@ -50,21 +58,42 @@
            [(ngModel)] = "model.date_of_survey" name = "date_of_survey">
      </div>
      <div class = "form-group">
-        <label for = "name">Interests</label>
+       <!-- <form [formGroup]="myForm"> -->
+        <label for = "name">Liked Most About Campus(Checkbox)</label>
         <input type = "text" class = "form-control" id = "hobbies"
            [(ngModel)] = "model.hobbies" name = "hobbies">
+        <!-- <div *ngFor="let data of emails">
+             <input type="checkbox" (change)="onChange(data.email, $event.target.checked)"> {{data.email}}<br>
+        </div> -->
+        <!-- </form> -->
      </div>
+
+
      <div class = "form-group">
-            <label for = "name">Favorite Location: </label>
+            <label for = "name">Interest in University(Radio) </label>
             <input type = "text" class = "form-control" id = "favLocation"
                [(ngModel)] = "model.favLocation" name = "favLocation">
          </div>
      <div class = "form-group">
-        <label for = "name">Likelihood of recommending this school to other prospective students:</label>
-        <input type = "text" class = "form-control" id = "recommend"
-           [(ngModel)] = "model.recommend" name = "recommend">
+        <label for = "recommend">Likelihood of recommending this school to other prospective students</label>
+           <select class="form-control" id="recommend"
+
+                   required
+
+                   [(ngModel)]="model.recommend" name="recommend"
+
+                   #studentOptions="ngModel">
+
+             <option *ngFor="let pow of options" [value]="pow">{{pow}}</option>
+
+           </select>
      </div>
+
+     <input type="submit" class="btn btn-default" (click)="onPost()">
+
    </form>
-   <button (click)="onPost()">Post My Survey</button>
+
+
+
 
 </div>

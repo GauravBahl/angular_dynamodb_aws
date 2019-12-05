@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from './Student';
 import { HttpClient } from '@angular/common/http';
+import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-student-survey-form',
@@ -10,18 +11,48 @@ import { HttpClient } from '@angular/common/http';
 
 export class StudentSurveyFormComponent implements OnInit {
 
-   //model = new Product(1,'ProductA');
+  options = ['Likely', 'Very Likely', 'UnLikely'];
 
-  model = new Student("first name", "last name", "Street Address", "City", "State", "Zip", "Email", "Telephone Number", "Date of survey", "Interests", "Recommendations", "Favorite Location");
+  model = new Student("first name", "last name", "Street Address", "City",
+   "State", "Zip", "Email", "Telephone Number", "Date of survey",
+    "Student, Location",
+    this.options[0],
+    "Friends, TV");
+
+
+  // emails = [{ email: "email1" }, { email: "email2" }, { email: "email3" }, { email: 'email4' }];
+  //
+  // myForm: FormGroup;
+
+  // constructor(private fb: FormBuilder) { }
 
   constructor (private http: HttpClient) {  }
 
   ngOnInit() {
+    // this.myForm = this.fb.group({
+    //   useremail: this.fb.array([])
+    // });
   }
+
   onPost() {
-    // add some header
     console.log(this.model);
     let obs = this.http.post('https://12ly4umjs5.execute-api.us-east-1.amazonaws.com/prod/student/', this.model);
-    obs.subscribe((response) => console.log(response));
+    obs.subscribe((response) => this.onSubmitAlert());
   }
+
+  onSubmitAlert(){
+    alert('Form Submitted !');
+  }
+
+  // onChange(email: string, isChecked: boolean) {
+  //   const emailFormArray = <FormArray>this.myForm.controls.useremail;
+  //
+  //   if (isChecked) {
+  //     emailFormArray.push(new FormControl(email));
+  //   } else {
+  //     let index = emailFormArray.controls.findIndex(x => x.value == email)
+  //     emailFormArray.removeAt(index);
+  //   }
+  // }
+
 }
