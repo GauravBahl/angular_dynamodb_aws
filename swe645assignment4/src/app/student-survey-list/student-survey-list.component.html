@@ -1,7 +1,8 @@
 <div class = "container">
     <h1>Student Survey List</h1>
     <li *ngFor="let student of studentList">
-           Student ID: {{ student.studentId }} - {{student.first_name}}
-
+           Student ID: {{ student.studentId }} - {{student.first_name}} - {{student.last_name}} - {{student.street_address}}
+           - {{student.city}} - {{student.state}} - {{student.zip}} - {{student.telephone_number}} - {{student.email}}
+           -  {{student.date_of_survey}} - {{student.hobbies}} - {{student.recommend}} - {{student.favLocation}}
     </li>
 </div>

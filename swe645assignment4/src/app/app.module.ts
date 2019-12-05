@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudentSurveyListComponent } from './student-survey-list/student-survey-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatRippleModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule,
     HomeComponent,
     FooterComponent,
     StudentSurveyFormComponent,
-    StudentSurveyListComponent
+    StudentSurveyListComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,
