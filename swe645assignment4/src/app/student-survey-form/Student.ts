@@ -1,4 +1,4 @@
-export class Product {
+export class Student {
    constructor (
       public studentid: number,
       public firstname: string,
@@ -10,6 +10,11 @@ export class Product {
       public email: string,
       public phone: string,
       public url: string,
-      public date: string
-   ) {  }
+      public graddate: string,
+      public interests: string,
+      public comments: string,
+      public recommendation: string,
+      public raffle: string
+   )
+   {}
 }
