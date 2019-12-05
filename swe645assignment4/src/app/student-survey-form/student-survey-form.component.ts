@@ -20,7 +20,7 @@ export class StudentSurveyFormComponent implements OnInit {
     "Friends, TV");
 
 
-  // emails = [{ email: "email1" }, { email: "email2" }, { email: "email3" }, { email: 'email4' }];
+  //emails = [{ email: "email1" }, { email: "email2" }, { email: "email3" }, { email: 'email4' }];
   //
   // myForm: FormGroup;
 

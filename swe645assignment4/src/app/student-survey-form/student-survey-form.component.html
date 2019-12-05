@@ -1,70 +1,72 @@
 <div class = "container">
    <h1>Student Survey Form</h1>
-   <form>
+   <form ngNativeValidate (submit)='onPost()'>
 
-  <div class = "form-group">
-     <input id="name" name="name" class="form-control"
-      required minlength="4" appForbiddenName="bob"
-      [(ngModel)]="model.first_name" #name="ngModel" >
-</div>
-
-      <div class = "form-group">
+    <div class = "form-group">
          <label for = "firstname">Firstname</label>
          <input type = "text" class = "form-control" id = "first_name"
             [(ngModel)] = "model.first_name" name = "first_name"
-            required minlength="4">
+            required>
       </div>
 
       <div class = "form-group">
          <label for = "lastname">Lastname</label>
          <input type = "text" class = "form-control" id = "last_name"
-            [(ngModel)] = "model.last_name" name = "last_name" required>
+            [(ngModel)] = "model.last_name" name = "last_name"
+            required>
       </div>
 
       <div class = "form-group">
          <label for = "a">Address</label>
          <input type = "text" class = "form-control" id = "street_address"
-            [(ngModel)] = "model.street_address" name = "street_address">
+            [(ngModel)] = "model.street_address" name = "street_address"
+            required>
       </div>
 
       <div class = "form-group">
          <label for = "name">City</label>
          <input type = "text" class = "form-control" id = "city"
-            [(ngModel)] = "model.city" name = "city">
+            [(ngModel)] = "model.city" name = "city"
+            required>
       </div>
       <div class = "form-group">
         <label for = "name">State</label>
         <input type = "text" class = "form-control" id = "state"
-           [(ngModel)] = "model.state" name = "state">
+           [(ngModel)] = "model.state" name = "state"
+           required>
      </div>
      <div class = "form-group">
         <label for = "name">Zip Code</label>
         <input type = "text" class = "form-control" id = "zip"
-           [(ngModel)] = "model.zip" name = "zip">
+           [(ngModel)] = "model.zip" name = "zip"
+           required>
      </div>
      <div class = "form-group">
         <label for = "name">Email</label>
         <input type = "text" class = "form-control" id = "email"
-           [(ngModel)] = "model.email" name = "email">
+           [(ngModel)] = "model.email" name = "email"
+           required>
      </div>
      <div class = "form-group">
         <label for = "name">Phone</label>
         <input type = "text" class = "form-control" id = "telephone_number"
-           [(ngModel)] = "model.telephone_number" name = "telephone_number">
+           [(ngModel)] = "model.telephone_number" name = "telephone_number"
+           required>
      </div>
      <div class = "form-group">
         <label for = "name">Date of Survey</label>
         <input type = "text" class = "form-control" id = "date_of_survey"
-           [(ngModel)] = "model.date_of_survey" name = "date_of_survey">
+           [(ngModel)] = "model.date_of_survey" name = "date_of_survey"
+           required>
      </div>
      <div class = "form-group">
        <!-- <form [formGroup]="myForm"> -->
         <label for = "name">Liked Most About Campus(Checkbox)</label>
-        <input type = "text" class = "form-control" id = "hobbies"
-           [(ngModel)] = "model.hobbies" name = "hobbies">
-        <!-- <div *ngFor="let data of emails">
+        <!-- <input type = "text" class = "form-control" id = "hobbies"
+           [(ngModel)] = "model.hobbies" name = "hobbies"> -->
+        <div *ngFor="let data of emails">
              <input type="checkbox" (change)="onChange(data.email, $event.target.checked)"> {{data.email}}<br>
-        </div> -->
+        </div>
         <!-- </form> -->
      </div>
 
@@ -89,7 +91,8 @@
            </select>
      </div>
 
-     <input type="submit" class="btn btn-default" (click)="onPost()">
+     <!-- <input type="submit" class="btn btn-default" (click)="onPost()"> -->
+     <input type="submit">
 
    </form>
 
