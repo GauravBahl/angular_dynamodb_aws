@@ -60,14 +60,13 @@
            required>
      </div>
      <div class = "form-group">
-       <!-- <form [formGroup]="myForm"> -->
+       <form [formGroup]="myForm">
         <label for = "name">Liked Most About Campus(Checkbox)</label>
-        <!-- <input type = "text" class = "form-control" id = "hobbies"
-           [(ngModel)] = "model.hobbies" name = "hobbies"> -->
         <div *ngFor="let data of emails">
              <input type="checkbox" (change)="onChange(data.email, $event.target.checked)"> {{data.email}}<br>
         </div>
-        <!-- </form> -->
+      </form>
+      <pre>Form values: {{myForm.value | json}}</pre>
      </div>
 
 
@@ -93,6 +92,8 @@
 
      <!-- <input type="submit" class="btn btn-default" (click)="onPost()"> -->
      <input type="submit">
+
+     <input type="reset">
 
    </form>
 

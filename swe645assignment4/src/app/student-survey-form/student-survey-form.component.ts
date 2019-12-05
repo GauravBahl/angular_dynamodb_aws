@@ -13,25 +13,26 @@ export class StudentSurveyFormComponent implements OnInit {
 
   options = ['Likely', 'Very Likely', 'UnLikely'];
 
+  logs = "";
+
+  emails = [{ email: "students" }, { email: "location" },
+  { email: "campus" }, { email: 'atmosphere' },
+  { email: 'dormrooms' }, { email: 'sports' }];
+
+  myForm: FormGroup;
+
   model = new Student("first name", "last name", "Street Address", "City",
    "State", "Zip", "Email", "Telephone Number", "Date of survey",
-    "Student, Location",
+    this.logs,
     this.options[0],
     "Friends, TV");
 
-
-  //emails = [{ email: "email1" }, { email: "email2" }, { email: "email3" }, { email: 'email4' }];
-  //
-  // myForm: FormGroup;
-
-  // constructor(private fb: FormBuilder) { }
-
-  constructor (private http: HttpClient) {  }
+  constructor (private http: HttpClient, private fb: FormBuilder) {  }
 
   ngOnInit() {
-    // this.myForm = this.fb.group({
-    //   useremail: this.fb.array([])
-    // });
+    this.myForm = this.fb.group({
+     useremail: this.fb.array([])
+   });
   }
 
   onPost() {
@@ -44,15 +45,18 @@ export class StudentSurveyFormComponent implements OnInit {
     alert('Form Submitted !');
   }
 
-  // onChange(email: string, isChecked: boolean) {
-  //   const emailFormArray = <FormArray>this.myForm.controls.useremail;
-  //
-  //   if (isChecked) {
-  //     emailFormArray.push(new FormControl(email));
-  //   } else {
-  //     let index = emailFormArray.controls.findIndex(x => x.value == email)
-  //     emailFormArray.removeAt(index);
-  //   }
-  // }
+  onChange(email: string, isChecked: boolean) {
+    const emailFormArray = <FormArray>this.myForm.controls.useremail;
+
+    if (isChecked) {
+      emailFormArray.push(new FormControl(email));
+    } else {
+      let index = emailFormArray.controls.findIndex(x => x.value == email)
+      emailFormArray.removeAt(index);
+    }
+
+    this.logs = emailFormArray.value.toString();
+    console.log('String values = '+this.logs);
+  }
 
 }
