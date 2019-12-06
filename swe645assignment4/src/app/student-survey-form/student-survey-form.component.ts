@@ -21,11 +21,17 @@ export class StudentSurveyFormComponent implements OnInit {
 
   myForm: FormGroup;
 
-  model = new Student("first name", "last name", "Street Address", "City",
-   "State", "Zip", "Email", "Telephone Number", "Date of survey",
-    this.logs,
-    this.options[0],
-    "Friends, TV");
+  model = new Student("", "", "", "",
+   "", "", "", "", "",
+    "",
+    "",
+    "");
+
+  // model = new Student("first name", "last name", "Street Address", "City",
+  //  "State", "Zip", "Email", "Telephone Number", "Date of survey",
+  //   this.logs,
+  //   this.options[0],
+  //   "Friends, TV");
 
   constructor (private http: HttpClient, private fb: FormBuilder) {  }
 
@@ -56,14 +62,15 @@ export class StudentSurveyFormComponent implements OnInit {
     }
 
     this.logs = emailFormArray.value.toString();
-    
+
     console.log('String values = '+this.logs);
 
-    this.model = new Student("first name", "last name", "Street Address", "City",
-     "State", "Zip", "Email", "Telephone Number", "Date of survey",
+    this.model = new Student(this.model.first_name, this.model.last_name,
+      this.model.street_address, this.model.city,
+     this.model.state, this.model.zip, this.model.email, this.model.telephone_number, this.model.date_of_survey,
       this.logs,
       this.options[0],
-      "Friends, TV");
+      this.model.favLocation);
 
   }
 

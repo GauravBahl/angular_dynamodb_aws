@@ -6,58 +6,66 @@
          <label for = "firstname">Firstname</label>
          <input type = "text" class = "form-control" id = "first_name"
             [(ngModel)] = "model.first_name" name = "first_name"
-            required>
+            required placeholder="FirstName">
       </div>
 
       <div class = "form-group">
          <label for = "lastname">Lastname</label>
          <input type = "text" class = "form-control" id = "last_name"
             [(ngModel)] = "model.last_name" name = "last_name"
-            required>
+            required
+            placeholder="LastName">
       </div>
 
       <div class = "form-group">
          <label for = "a">Address</label>
          <input type = "text" class = "form-control" id = "street_address"
             [(ngModel)] = "model.street_address" name = "street_address"
-            required>
+            required
+            placeholder="Address">
       </div>
 
       <div class = "form-group">
          <label for = "name">City</label>
          <input type = "text" class = "form-control" id = "city"
             [(ngModel)] = "model.city" name = "city"
-            required>
+            required
+            placeholder="City">
       </div>
       <div class = "form-group">
         <label for = "name">State</label>
         <input type = "text" class = "form-control" id = "state"
            [(ngModel)] = "model.state" name = "state"
-           required>
+           required
+           placeholder="State">
      </div>
      <div class = "form-group">
         <label for = "name">Zip Code</label>
         <input type = "text" class = "form-control" id = "zip"
            [(ngModel)] = "model.zip" name = "zip"
-           required>
+           required
+           placeholder="ZIP">
      </div>
      <div class = "form-group">
         <label for = "name">Email</label>
         <input type = "text" class = "form-control" id = "email"
            [(ngModel)] = "model.email" name = "email"
-           required>
+           required
+           placeholder="Email">
      </div>
      <div class = "form-group">
         <label for = "name">Phone</label>
         <input type = "text" class = "form-control" id = "telephone_number"
            [(ngModel)] = "model.telephone_number" name = "telephone_number"
-           required>
+           required
+           placeholder="Phone">
      </div>
      <div class = "form-group">
         <label for = "name">Date of Survey</label>
-        <input type = "text" class = "form-control" id = "date_of_survey"
+        <input type = "date" class = "form-control" id = "date_of_survey"
            [(ngModel)] = "model.date_of_survey" name = "date_of_survey"
-           required>
+           required
+           >
      </div>
      <div class = "form-group">
        <form [formGroup]="myForm">
